@@ -1,0 +1,1 @@
+﻿web: dotnet exec ./CodePipelineApp.dll --urls http://codepipe-env.eba-jnm42i2u.us-east-2.elasticbeanstalk.com/
