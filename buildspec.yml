@@ -27,5 +27,4 @@ phases:
 artifacts:
   files:
     - .\build_output\**\*
-  base-directory: build_output
   discard-paths: no
