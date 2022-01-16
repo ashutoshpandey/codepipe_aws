@@ -10,19 +10,18 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - cd CodePipelineApp
-      - dotnet restore CodePipelineApp.csproj
+      - dotnet restore ./CodePipelineApp/CodePipelineApp.csproj
       
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build CodePipelineApp.csproj
+      - dotnet build ./CodePipelineApp/CodePipelineApp.csproj
       
   post_build:
     commands:
       - echo Publish started on `date`
       # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/dotnet-linux-platform-bundle-app.html
-      - dotnet publish -c Release -r win-x64 -o ./build_output ./CodePipelineApp.csproj  --self-contained false
+      - dotnet publish -c Release -r win-x64 -o ./build_output ./CodePipelineApp/CodePipelineApp.csproj  --self-contained false
       - cp Procfile ./build_output
       
 artifacts:
