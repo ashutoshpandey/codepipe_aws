@@ -8,8 +8,4 @@
     <None Remove="Procfile" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Include="Procfile" />
-  </ItemGroup>
-
 </Project>
